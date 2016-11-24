@@ -44,7 +44,7 @@ a {
 	<div id="msg-box">
 		<form name="form1" method="post" enctype="multipart/form-data"
 			action="upload.do">
-			<div class="title">OpenOffice -> PDF -> Image</div>
+			<div class="title">OpenOffice + PDFRenderer + js</div>
 			<div class="title">请上传要处理的文件，过程可能需要几分钟，请稍候片刻。</div>
 			<table align="center">
 				<tr>

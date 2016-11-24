@@ -3,58 +3,49 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>review</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-    </head>
-    <body>
-		<div class="bg_image"><img src="" alt=""/></div>
-		<div id="loader" class="loader"></div>
-		<div class="wrapper">
-			<h1>Review</h1>
-			<div id="ps_container" class="ps_container">
+	<title>review</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<div class="bg_image">
+		<img src="" alt="" />
+	</div>
+	<div id="loader" class="loader"></div>
+	<div class="wrapper">
+		<h1>Review</h1>
+		<div id="ps_container" class="ps_container">
 			<%
 					List<String> list = (List<String>) session.getAttribute("list");
 			%>
-				<div class="ps_image_wrapper">
-					<!-- First initial image -->
-					<img src="<%=list.get(0) %>" alt="" />
-				</div>
-				<!-- Navigation items -->
-				<div class="ps_next"></div>
-				<div class="ps_prev"></div>
-				<!-- Dot list with thumbnail preview -->
-				<ul class="ps_nav">
+			<div class="ps_image_wrapper">
+				<!-- First initial image -->
+				<img src="<%=list.get(0) %>" alt="" />
+			</div>
+			<!-- Navigation items -->
+			<div class="ps_next"></div>
+			<div class="ps_prev"></div>
+			<!-- Dot list with thumbnail preview -->
+			<ul class="ps_nav">
 				<%
 					for (String s : list) {
-						System.out.println(s);
 						%>
-						<li><a href="<%=s %>" rel="<%=s %>">Image 2</a></li>
-						<%
+				<li><a href="<%=s %>" rel="<%=s %>">Image 2</a></li>
+				<%
 					}
 				%>
-				<!-- <li class="selected"><a href="C:/temp/stonefeng/test1.jpg" rel="images/thumbs/1.jpg">Image 1</a></li>
-					<li><a href="images/3.jpg" rel="images/thumbs/3.jpg">Image 3</a></li>
-					<li><a href="images/4.jpg" rel="images/thumbs/4.jpg">Image 4</a></li>
-					<li><a href="images/5.jpg" rel="images/thumbs/5.jpg">Image 5</a></li>
-					<li><a href="images/6.jpg" rel="images/thumbs/6.jpg">Image 6</a></li>
-					<li><a href="images/7.jpg" rel="images/thumbs/7.jpg">Image 7</a></li>
-					<li><a href="images/8.jpg" rel="images/thumbs/8.jpg">Image 8</a></li>
-					<li><a href="images/9.jpg" rel="images/thumbs/9.jpg">Image 9</a></li>
-					<li><a href="images/10.jpg" rel="images/thumbs/10.jpg">Image 10</a></li> -->
-					<li class="ps_preview">
-						<div class="ps_preview_wrapper">
-							<!-- Thumbnail comes here -->
-						</div>
-						<!-- Little triangle -->
-						<span></span>
-					</li>
-				</ul>
-			</div>
+				<li class="ps_preview">
+					<div class="ps_preview_wrapper">
+						<!-- Thumbnail comes here -->
+					</div> <!-- Little triangle --> <span></span>
+				</li>
+			</ul>
 		</div>
+	</div>
 
-		<!-- The JavaScript -->
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-        <script type="text/javascript">
+	<!-- The JavaScript -->
+	<script type="text/javascript"
+		src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript">
 			/*
 			the images preload plugin
 			*/
@@ -82,7 +73,7 @@
 				};
 			})(jQuery);
 		</script>
-        <script type="text/javascript">
+	<script type="text/javascript">
 			$(function() {
 				//some elements..
 				var $ps_container		= $('#ps_container'),
@@ -283,7 +274,6 @@
 				}
 			});
         </script>
-    <br><br>
-
+	<br><br>
 </body>
 </html>
